@@ -1,4 +1,4 @@
-# Exercise-03d-Shaders
+# Match 3
 
 Exercise for MSCH-C220
 
