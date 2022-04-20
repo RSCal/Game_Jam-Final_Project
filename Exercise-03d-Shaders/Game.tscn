@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/coin_small.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Jellee-Bold.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://Assets/background_game.png" type="Texture" id=6]
-[ext_resource path="res://Control.gd" type="Script" id=7]
+[ext_resource path="res://Label.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 5 )
@@ -70,50 +70,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control" type="Control" parent="HUD"]
-margin_left = 500.0
-margin_top = 13.0
-margin_right = 624.0
-margin_bottom = 53.0
+[node name="Label" type="Label" parent="HUD"]
+margin_left = 400.0
+margin_right = 576.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00"
+align = 1
+valign = 1
 script = ExtResource( 7 )
 __meta__ = {
-"_edit_group_": true,
 "_edit_use_anchors_": false
 }
-minute = 1
-seconds = 30
-
-[node name="min" type="RichTextLabel" parent="HUD/Control"]
-margin_right = 40.0
-margin_bottom = 40.0
-custom_colors/default_color = Color( 1, 1, 1, 1 )
-custom_colors/selection_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "00:"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="sec" type="RichTextLabel" parent="HUD/Control"]
-margin_left = 20.0
-margin_right = 60.0
-margin_bottom = 40.0
-custom_colors/default_color = Color( 1, 1, 1, 1 )
-custom_colors/selection_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "00"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Timer" type="Timer" parent="HUD/Control"]
-pause_mode = 2
-process_mode = 0
-one_shot = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 15 )
-
-[connection signal="timeout" from="HUD/Control/Timer" to="HUD/Control" method="_on_Timer_timeout"]

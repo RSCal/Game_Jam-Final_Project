@@ -125,6 +125,9 @@ custom_fonts/font = SubResource( 3 )
 text = "Welcome to Match-3"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Play" type="Button" parent="."]
 margin_left = 238.0
