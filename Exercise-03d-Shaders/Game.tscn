@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Grid/grid.gd" type="Script" id=1]
 [ext_resource path="res://Pieces/Piece Background.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Assets/Jellee-Bold.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://Assets/Card_Background.png" type="Texture" id=6]
 [ext_resource path="res://Label.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Music/GameJam_Score.wav" type="AudioStream" id=8]
+[ext_resource path="res://UI/Music.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 5 )
@@ -89,3 +91,10 @@ __meta__ = {
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 15 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+script = ExtResource( 9 )
+
+[connection signal="finished" from="Music" to="Music" method="_on_Music_finished"]
