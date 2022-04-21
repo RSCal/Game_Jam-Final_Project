@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Ignotum.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GameOver.gd" type="Script" id=2]
+[ext_resource path="res://Assets/background_game.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -32,6 +33,11 @@ margin_bottom = 1024.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="PanelContainer/MarginContainer"]
+position = Vector2( 331, 498.5 )
+scale = Vector2( 1, 1.0498 )
+texture = ExtResource( 3 )
 
 [node name="Row" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
 margin_right = 576.0
