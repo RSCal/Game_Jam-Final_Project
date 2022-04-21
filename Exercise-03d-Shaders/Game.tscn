@@ -72,7 +72,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="HUD"]
+[node name="Countdown" type="Label" parent="HUD"]
 margin_left = 400.0
 margin_right = 576.0
 margin_bottom = 40.0
