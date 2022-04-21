@@ -5,7 +5,7 @@
 [ext_resource path="res://UI/HUD.gd" type="Script" id=3]
 [ext_resource path="res://Assets/coin_small.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Jellee-Bold.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://Assets/background_game.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Card_Background.png" type="Texture" id=6]
 [ext_resource path="res://Label.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=2]
@@ -24,10 +24,12 @@ glow_bicubic_upscale = true
 [node name="Game" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
+position = Vector2( -17, -10 )
+scale = Vector2( 1.21285, 1.56006 )
 texture = ExtResource( 6 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 576, 1024 )
+region_rect = Rect2( 0.588, -0.209, 489, 666 )
 
 [node name="grid" type="Node2D" parent="."]
 script = ExtResource( 1 )
